@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.kondadeliveryapp.fragments.HomeFragment"
+        android:label="Restaurants"
+        tools:layout="@layout/home_fragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_menuActivity"
+            app:destination="@id/menuActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.kondadeliveryapp.fragments.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.example.kondadeliveryapp.fragments.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" />
+    <fragment
+        android:id="@+id/favouriteFragment"
+        android:name="com.example.kondadeliveryapp.fragments.FavouriteFragment"
+        android:label="fragment_favourite"
+        tools:layout="@layout/fragment_favourite" />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.kondadeliveryapp.fragments.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" />
+    <activity
+        android:id="@+id/menuActivity"
+        android:name="com.example.kondadeliveryapp.MenuActivity"
+        android:label="activity_menu"
+        tools:layout="@layout/activity_menu" />
+</navigation>
