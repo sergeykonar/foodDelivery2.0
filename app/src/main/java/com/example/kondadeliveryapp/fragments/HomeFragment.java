@@ -18,7 +18,7 @@ import android.widget.Toast;
 import com.example.kondadeliveryapp.R;
 import com.example.kondadeliveryapp.adapters.RestaurantsAdapter;
 import com.example.kondadeliveryapp.models.Restaurant;
-import com.example.kondadeliveryapp.viewmodels.BlankViewModel;
+
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;
@@ -33,7 +33,6 @@ import java.util.Objects;
 
 public class HomeFragment extends Fragment {
 
-    private BlankViewModel mViewModel;
     private RecyclerView recyclerView;
 
     public static HomeFragment newInstance() {
@@ -49,7 +48,7 @@ public class HomeFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(BlankViewModel.class);
+
         List<Restaurant> restaurants = getRestaurantData();
         RestaurantsAdapter adapter = new RestaurantsAdapter(restaurants, getContext());
 

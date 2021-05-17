@@ -32,7 +32,7 @@
     <fragment
         android:id="@+id/cartFragment"
         android:name="com.example.kondadeliveryapp.fragments.CartFragment"
-        android:label="fragment_cart"
+        android:label="Shopping cart"
         tools:layout="@layout/fragment_cart" />
     <activity
         android:id="@+id/menuActivity"

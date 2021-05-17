@@ -59,7 +59,9 @@ public class ItemFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        Bundle bundle = getArguments();
+        menu = bundle.getParcelable("id");
+        Log.e("QWW", menu.getItems().get(0).getName());
 
     }
 
@@ -69,13 +71,14 @@ public class ItemFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_item_list, container, false);
         RecyclerView recyclerView = view.findViewById(R.id.list);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
-        Bundle bundle = getArguments();
-        menu = bundle.getParcelable("id");
-        Log.e("QWW", menu.getItems().get(0).getName());
+
         ItemAdapter itemAdapter = new ItemAdapter(menu.getItems());
         recyclerView.setAdapter(itemAdapter);
+
+
         return view;
     }
+
 
 
 }
