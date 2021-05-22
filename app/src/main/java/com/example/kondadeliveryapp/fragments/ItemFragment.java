@@ -76,6 +76,8 @@ public class ItemFragment extends Fragment {
         recyclerView.setAdapter(itemAdapter);
 
 
+
+
         return view;
     }
 

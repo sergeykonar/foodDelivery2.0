@@ -116,6 +116,13 @@ public class MenuActivity extends AppCompatActivity {
         }
     }
 
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.e("QW", "MenuActivity onResume() ");
+    }
+
     /**
      * A simple pager adapter that represents 5 ScreenSlidePageFragment objects, in
      * sequence.
