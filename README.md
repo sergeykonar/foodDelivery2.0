@@ -3,6 +3,7 @@
   <li>Java</li>
   <li>Architecture Components (Navuagtion Component, View Model)</li>
   <li>Stripe API for sending payment (demo)</li>
+  Get Stripe API: https://stripe.com/
 </ul>
 
 <img src="https://i.imgur.com/q3mwtAg.png" height= "500px" > </img>
