@@ -1,5 +1,6 @@
 package com.example.kondadeliveryapp.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -16,6 +17,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.kondadeliveryapp.CheckoutActivityJava;
 import com.example.kondadeliveryapp.MainActivity;
 import com.example.kondadeliveryapp.R;
 import com.example.kondadeliveryapp.adapters.CartItemsAdapter;
@@ -84,6 +86,15 @@ public class CartFragment extends Fragment {
 
                 DividerItemDecoration itemDecor = new DividerItemDecoration(getContext(), LinearLayout.VERTICAL);
                 recyclerView.addItemDecoration(itemDecor);
+            }
+        });
+
+        Button pay = view.findViewById(R.id.pay);
+        pay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent check = new Intent(getContext(), CheckoutActivityJava.class);
+                startActivity(check);
             }
         });
 

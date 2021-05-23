@@ -10,11 +10,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+
+        android:usesCleartextTraffic="true"
         android:theme="@style/Theme.KondaDeliveryApp">
+        <activity android:name=".CheckoutActivityJava"></activity>
         <activity
             android:name=".MenuActivity"
             android:label="@string/title_activity_menu"
-            android:theme="@style/Theme.KondaDeliveryApp.NoActionBar"></activity>
+            android:theme="@style/Theme.KondaDeliveryApp.NoActionBar" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
