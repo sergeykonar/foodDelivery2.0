@@ -2,20 +2,18 @@ package com.example.kondadeliveryapp.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.recyclerview.widget.DividerItemDecoration;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.kondadeliveryapp.CheckoutActivityJava;
 import com.example.kondadeliveryapp.MainActivity;
@@ -24,8 +22,6 @@ import com.example.kondadeliveryapp.adapters.CartItemsAdapter;
 import com.example.kondadeliveryapp.models.CartItem;
 
 import java.util.List;
-
-import static android.widget.LinearLayout.HORIZONTAL;
 
 /**
  * A simple {@link Fragment} subclass.

@@ -1,8 +1,9 @@
 package com.example.kondadeliveryapp.fragments;
 
-import androidx.lifecycle.ViewModelProvider;
-
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -10,15 +11,9 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Toast;
-
 import com.example.kondadeliveryapp.R;
 import com.example.kondadeliveryapp.adapters.RestaurantsAdapter;
 import com.example.kondadeliveryapp.models.Restaurant;
-
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;
@@ -29,7 +24,6 @@ import java.io.StringWriter;
 import java.io.Writer;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 
 public class HomeFragment extends Fragment {
 

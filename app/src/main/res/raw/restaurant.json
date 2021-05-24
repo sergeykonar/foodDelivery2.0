@@ -21,7 +21,7 @@
           {
             "name": "Spaghetti",
             "price": 10.00,
-            "url": "https://lh3.googleusercontent.com/proxy/sjd_LijXjFCc0xB4QhXs0nRn_DxMZnof6znQmANyjlrrfi9J91-R3ZH5C6HWkOwd05pZoB4h-ABYaiMCMQjvhKjQJmvX0Muz2AXTUerMKA"
+            "url": "http://pngimg.com/uploads/spaghetti/spaghetti_PNG24.png"
 
           },
           {
@@ -59,8 +59,8 @@
     ]
   },
   {
-    "name":"Chicago's Pizza",
-    "address":"7225 W Harlem Ave.",
+    "name":"Chicken hut",
+    "address":"88000 Uzhgorod",
     "delivery_charge": 5,
     "image":"https://www.bulldogtribune.com/wp-content/uploads/2018/05/chicagos20logo_color202_0001_62111459-900x651.jpg",
 
@@ -80,7 +80,7 @@
           {
             "name": "Spaghetti",
             "price": 10.00,
-            "url": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2014/7/17/1/FN_Simple-Spaghetti-with-Tomato-Sauce_s4x3.jpg.rend.hgtvcom.826.620.suffix/1408069256188.jpeg"
+            "url": "http://pngimg.com/uploads/spaghetti/spaghetti_PNG24.png"
 
           }
 
@@ -90,9 +90,9 @@
         "category_name": "Drinks",
         "items": [
           {
-            "name": "Spaghetti",
+            "name": "Coke",
             "price": 10.00,
-            "url": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2014/7/17/1/FN_Simple-Spaghetti-with-Tomato-Sauce_s4x3.jpg.rend.hgtvcom.826.620.suffix/1408069256188.jpeg"
+            "url": "https://assets.stickpng.com/thumbs/580b57fbd9996e24bc43c0de.png"
 
           }
         ]

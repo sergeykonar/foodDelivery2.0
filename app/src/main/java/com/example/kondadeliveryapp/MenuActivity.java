@@ -2,33 +2,19 @@ package com.example.kondadeliveryapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
-import com.example.kondadeliveryapp.fragments.AccountFragment;
-import com.example.kondadeliveryapp.fragments.CartFragment;
-import com.example.kondadeliveryapp.fragments.HistoryFragment;
-import com.example.kondadeliveryapp.fragments.HomeFragment;
-import com.example.kondadeliveryapp.fragments.ItemFragment;
-import com.example.kondadeliveryapp.models.Menu;
-import com.example.kondadeliveryapp.models.Restaurant;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-import com.google.android.material.tabs.TabLayout;
-
-import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
-import androidx.appcompat.app.AppCompatActivity;
 
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.MenuItem;
-import android.view.View;
-
-import com.example.kondadeliveryapp.ui.main.SectionsPagerAdapter;
+import com.example.kondadeliveryapp.fragments.ItemFragment;
+import com.example.kondadeliveryapp.models.Menu;
+import com.example.kondadeliveryapp.models.Restaurant;
+import com.google.android.material.tabs.TabLayout;
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;
@@ -43,6 +29,8 @@ import java.util.List;
 public class MenuActivity extends AppCompatActivity {
 
     private int NUM_PAGES = 2;
+
+
 
     /**
      * The pager widget, which handles animation and allows swiping horizontally to access previous

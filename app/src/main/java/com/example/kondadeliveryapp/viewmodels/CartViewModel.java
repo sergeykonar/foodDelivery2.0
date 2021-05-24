@@ -6,12 +6,9 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
-import androidx.lifecycle.ViewModel;
 
 import com.example.kondadeliveryapp.models.CartItem;
-import com.example.kondadeliveryapp.models.Item;
 
-import java.util.LinkedList;
 import java.util.List;
 
 public class CartViewModel extends AndroidViewModel {

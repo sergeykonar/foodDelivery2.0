@@ -1,32 +1,18 @@
 package com.example.kondadeliveryapp.fragments;
 
-import android.content.Context;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.kondadeliveryapp.R;
 import com.example.kondadeliveryapp.adapters.ItemAdapter;
 import com.example.kondadeliveryapp.models.Menu;
-import com.example.kondadeliveryapp.models.Restaurant;
-import com.google.gson.Gson;
-
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.io.StringWriter;
-import java.io.Writer;
-import java.util.Arrays;
-import java.util.List;
 
 
 /**

@@ -1,28 +1,24 @@
 package com.example.kondadeliveryapp.adapters;
 
-import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.lifecycle.ViewModelProvider;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.NumberPicker;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.kondadeliveryapp.MainActivity;
 import com.example.kondadeliveryapp.R;
 import com.example.kondadeliveryapp.models.CartItem;
 import com.example.kondadeliveryapp.models.Item;
-import com.example.kondadeliveryapp.viewmodels.CartViewModel;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.List;
