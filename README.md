@@ -6,7 +6,7 @@
   Get Stripe API: https://stripe.com/
 </ul>
 
-<img src="https://i.imgur.com/q3mwtAg.png" height= "500px" > </img>
+<img src="https://i.imgur.com/cU0Kp0Y.png" height= "500px" > </img>
 <img src="https://i.imgur.com/1gzumEM.png" height= "500px" > </img>
 <img src="https://i.imgur.com/WJgEP1o.png" height="500px"> </img>
 <img src="https://i.imgur.com/0b7kqpK.png" height="500px" />
