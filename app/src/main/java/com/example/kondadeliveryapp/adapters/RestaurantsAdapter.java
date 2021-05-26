@@ -7,6 +7,7 @@ import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -57,9 +58,15 @@ public class RestaurantsAdapter extends RecyclerView.Adapter<RestaurantsAdapter.
 
         holder.cardView.setOnClickListener(cardListener);
         holder.cardView.setTag(position);
-
+        holder.likeBtn.setOnClickListener(l);
     }
 
+    private final View.OnClickListener l = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+
+        }
+    };
 
 
     private final View.OnClickListener cardListener = new View.OnClickListener() {
@@ -91,7 +98,7 @@ public class RestaurantsAdapter extends RecyclerView.Adapter<RestaurantsAdapter.
         TextView restaurantHours;
         ImageView thumbImage;
         CardView cardView;
-
+        ImageButton likeBtn;
         public MyViewHolder(View view) {
             super(view);
             restaurantName = view.findViewById(R.id.restaurantName);
@@ -99,6 +106,7 @@ public class RestaurantsAdapter extends RecyclerView.Adapter<RestaurantsAdapter.
             restaurantHours = view.findViewById(R.id.restaurantHours);
             thumbImage = view.findViewById(R.id.thumbImage);
             cardView = view.findViewById(R.id.cardView);
+            likeBtn = view.findViewById(R.id.likeBtn);
         }
     }
 }
