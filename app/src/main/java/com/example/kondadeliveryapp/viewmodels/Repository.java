@@ -8,7 +8,9 @@ import androidx.room.Room;
 
 import com.example.kondadeliveryapp.db.CartDao;
 import com.example.kondadeliveryapp.db.CartDatabase;
+import com.example.kondadeliveryapp.db.FavouriteDao;
 import com.example.kondadeliveryapp.models.CartItem;
+import com.example.kondadeliveryapp.models.FavouriteItem;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -18,12 +20,14 @@ public class Repository {
     private Application application;
     private CartDatabase cartDatabase;
     private MutableLiveData<List<CartItem>> cartItemData;
+    private MutableLiveData<List<FavouriteItem>> favourites;
 
     public Repository(Application application) {
         this.application=application;
         cartDatabase = Room.databaseBuilder(application.getApplicationContext(),
                 CartDatabase.class, "cart").allowMainThreadQueries().fallbackToDestructiveMigration().build();
         cartItemData = new MutableLiveData<>();
+        favourites = new MutableLiveData<>();
         loadData();
     }
 
@@ -32,7 +36,9 @@ public class Repository {
         List<CartItem> cartItems =  cartDatabase.cartDao().getAll();
 
             cartItemData.setValue(cartItems);
+        List<FavouriteItem> favouriteItems = cartDatabase.favouriteDao().getAll();
 
+        favourites.setValue(favouriteItems);
 
 
     }
@@ -57,5 +63,19 @@ public class Repository {
         cartDao.deleteAll();
         List<CartItem> l = cartDao.getAll();
         cartItemData.setValue(l);
+    }
+
+    public MutableLiveData<List<FavouriteItem>> getFavouriteList() {
+
+        return favourites;
+    }
+
+    public void insertFavouriteItem(FavouriteItem favouriteItem) {
+        FavouriteDao favouriteDao = cartDatabase.favouriteDao();
+        List<FavouriteItem> list = favouriteDao.getAll();
+        favouriteDao.insert(favouriteItem);
+
+        list.add(favouriteItem);
+        favourites.setValue(list);
     }
 }

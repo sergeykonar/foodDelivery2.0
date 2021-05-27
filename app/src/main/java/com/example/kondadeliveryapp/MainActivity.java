@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.kondadeliveryapp.viewmodels.CartViewModel;
+import com.example.kondadeliveryapp.viewmodels.FavouriteViewModel;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.gson.Gson;
 
@@ -27,6 +28,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     public static CartViewModel cartViewModel;
+    public static FavouriteViewModel favouriteViewModel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(bottomNavigationView, navController);
 
         cartViewModel = new ViewModelProvider(this).get(CartViewModel.class);
-
+        favouriteViewModel = new ViewModelProvider(this).get(FavouriteViewModel.class);
 
     }
 

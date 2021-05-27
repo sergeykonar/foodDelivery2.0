@@ -2,6 +2,7 @@ package com.example.kondadeliveryapp.adapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.LayoutInflater;
@@ -16,8 +17,11 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.kondadeliveryapp.MainActivity;
 import com.example.kondadeliveryapp.MenuActivity;
 import com.example.kondadeliveryapp.R;
+import com.example.kondadeliveryapp.db.FavouriteDao;
+import com.example.kondadeliveryapp.models.FavouriteItem;
 import com.example.kondadeliveryapp.models.Restaurant;
 
 import java.util.List;
@@ -58,13 +62,31 @@ public class RestaurantsAdapter extends RecyclerView.Adapter<RestaurantsAdapter.
 
         holder.cardView.setOnClickListener(cardListener);
         holder.cardView.setTag(position);
+
+        holder.likeBtn.setTag(position);
         holder.likeBtn.setOnClickListener(l);
+
+
     }
 
     private final View.OnClickListener l = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+            int position = (int) v.getTag();
 
+            // TODO: getItem id in RecyclerView
+
+            ImageButton imageButton = v.findViewById(R.id.likeBtn);
+            Drawable drawable = v.getResources().getDrawable(R.drawable.ic_baseline_favorite_24);
+            imageButton.setImageDrawable(drawable);
+            Restaurant restaurant = restaurantList.get(position);
+            FavouriteItem favouriteItem = new FavouriteItem(restaurant.getName(), restaurant.getAddress(), restaurant.getImage(), restaurant.getDelivery_charge());
+
+
+            MainActivity.favouriteViewModel.insert(favouriteItem);
+            // TODO: implement adding to favourites (Room Database for demo)
+
+            // TODO: replace with POST request to the API server (for future)
         }
     };
 
