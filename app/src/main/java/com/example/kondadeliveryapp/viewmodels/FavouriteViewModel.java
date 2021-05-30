@@ -30,4 +30,8 @@ public class FavouriteViewModel extends AndroidViewModel {
     public void insert(FavouriteItem favouriteItem){
         repository.insertFavouriteItem(favouriteItem);
     }
+
+    public void delete(FavouriteItem favouriteItem){
+        repository.deleteFavItem(favouriteItem);
+    }
 }

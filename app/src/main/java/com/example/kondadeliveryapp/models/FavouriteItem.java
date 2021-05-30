@@ -20,10 +20,6 @@ public class FavouriteItem {
     private float delivery_charge;
 
 
-
-
-
-
     public FavouriteItem(String name, String address, String image, float delivery_charge) {
         this.name = name;
         this.address = address;

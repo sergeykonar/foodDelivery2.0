@@ -78,4 +78,15 @@ public class Repository {
         list.add(favouriteItem);
         favourites.setValue(list);
     }
+
+    public void deleteFavItem(FavouriteItem favouriteItem) {
+        FavouriteDao favouriteDao = cartDatabase.favouriteDao();
+        List<FavouriteItem> list = favouriteDao.getAll();
+        favouriteDao.delete(favouriteItem);
+
+        list.remove(favouriteItem);
+        favourites.setValue(list);
+
+
+    }
 }

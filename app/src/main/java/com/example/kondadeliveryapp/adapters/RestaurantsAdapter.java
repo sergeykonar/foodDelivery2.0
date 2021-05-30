@@ -30,6 +30,7 @@ public class RestaurantsAdapter extends RecyclerView.Adapter<RestaurantsAdapter.
 
 
     private List<Restaurant> restaurantList;
+    private List<FavouriteItem> favouriteItems;
 
     private Context context;
     public RestaurantsAdapter(List<Restaurant> restaurantList, Context context) {
@@ -66,6 +67,22 @@ public class RestaurantsAdapter extends RecyclerView.Adapter<RestaurantsAdapter.
         holder.likeBtn.setTag(position);
         holder.likeBtn.setOnClickListener(l);
 
+        favouriteItems = MainActivity.favouriteViewModel.getFavouriteList().getValue();
+
+
+        for (FavouriteItem favouriteItem : favouriteItems){
+            if(favouriteItem.getName().equals(holder.restaurantName.getText().toString())){
+                restaurantList.get(position).setFavourite(true);
+            }
+            if(restaurantList.get(position).isFavourite()){
+                ImageButton imageButton = holder.likeBtn;
+                Drawable drawable = context.getResources().getDrawable(R.drawable.ic_baseline_favorite_24);
+                imageButton.setImageDrawable(drawable);
+            }
+        }
+
+
+
 
     }
 
@@ -74,16 +91,35 @@ public class RestaurantsAdapter extends RecyclerView.Adapter<RestaurantsAdapter.
         public void onClick(View v) {
             int position = (int) v.getTag();
 
-            // TODO: getItem id in RecyclerView
-
-            ImageButton imageButton = v.findViewById(R.id.likeBtn);
-            Drawable drawable = v.getResources().getDrawable(R.drawable.ic_baseline_favorite_24);
-            imageButton.setImageDrawable(drawable);
             Restaurant restaurant = restaurantList.get(position);
-            FavouriteItem favouriteItem = new FavouriteItem(restaurant.getName(), restaurant.getAddress(), restaurant.getImage(), restaurant.getDelivery_charge());
+            if(restaurant.isFavourite()){
+                ImageButton imageButton = v.findViewById(R.id.likeBtn);
+                Drawable drawable = v.getResources().getDrawable(R.drawable.ic_baseline_favorite_border_24);
+                imageButton.setImageDrawable(drawable);
+                restaurant.setFavourite(false);
+
+                FavouriteItem fi = MainActivity.favouriteViewModel.getFavouriteList().getValue().get(position);
+                MainActivity.favouriteViewModel.delete(fi);
 
 
-            MainActivity.favouriteViewModel.insert(favouriteItem);
+            }else
+            {
+                // TODO: getItem id in RecyclerView
+
+
+                ImageButton imageButton = v.findViewById(R.id.likeBtn);
+                Drawable drawable = v.getResources().getDrawable(R.drawable.ic_baseline_favorite_24);
+                imageButton.setImageDrawable(drawable);
+
+
+                restaurant.setFavourite(true);
+
+
+                FavouriteItem favouriteItem = new FavouriteItem(restaurant.getName(), restaurant.getAddress(), restaurant.getImage(), restaurant.getDelivery_charge());
+
+
+                MainActivity.favouriteViewModel.insert(favouriteItem);
+            }
             // TODO: implement adding to favourites (Room Database for demo)
 
             // TODO: replace with POST request to the API server (for future)

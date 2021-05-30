@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "942516356666",
+    "project_id": "delivery-187bd",
+    "storage_bucket": "delivery-187bd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:942516356666:android:d196f7044443244bd09703",
+        "android_client_info": {
+          "package_name": "com.example.kondadeliveryapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "942516356666-dq9dba9bpmcgf3e7gpac2gulopjkno6t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkbqTygbFxZIApJyPzHt142uqrRSB69_c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "942516356666-dq9dba9bpmcgf3e7gpac2gulopjkno6t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -16,6 +16,7 @@ public class Restaurant {
     private Hours hours;
     private List<Menu> menus;
 
+    private boolean favourite=false;
     public String getName() {
         return name;
     }
@@ -96,5 +97,13 @@ public class Restaurant {
         dest.writeString(image);
         dest.writeFloat(delivery_charge);
         dest.writeTypedList(menus);
+    }
+
+    public boolean isFavourite() {
+        return this.favourite;
+    }
+
+    public void setFavourite(boolean favourite) {
+        this.favourite = favourite;
     }
 }
